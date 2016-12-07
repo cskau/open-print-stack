@@ -17,6 +17,7 @@ near complete control over what you're asking your printer to print.
 ## Standards References
 
 - [PWG5102-4] PWG Raster Format
+
     https://ftp.pwg.org/pub/pwg/candidates/cs-ippraster10-20120420-5102.4.pdf
 
 - [RFC2565] Internet Printing Protocol/1.0: Encoding and Transport
