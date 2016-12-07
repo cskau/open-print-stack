@@ -24,9 +24,11 @@ Also note: lots of things are hard-coded at the moments, so you will have to
 update those values appropriately, like setting the device IP in `print.py`.
 
 Raster an image or document page to a format your printer understands, like PWD:
+
     ./raster.py encode ./test.png ./test.pwg
 
 Send the raw raster file to your printer:
+
     ./print.py ./test.pwg
 
 
