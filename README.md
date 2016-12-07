@@ -1,4 +1,4 @@
-# open-print-stack
+# Open Print Stack
 
 A full stack implementation of IPP/PWG printing.
 
@@ -16,25 +16,24 @@ near complete control over what you're asking your printer to print.
 
 ## Standards References
 
-- [PWG5102-4] PWG Raster Format
+- [[PWG5102-4](https://ftp.pwg.org/pub/pwg/candidates/cs-ippraster10-20120420-5102.4.pdf)]
+    PWG Raster Format
 
-    https://ftp.pwg.org/pub/pwg/candidates/cs-ippraster10-20120420-5102.4.pdf
+- [[RFC2565](https://tools.ietf.org/html/rfc2565)]
+    Internet Printing Protocol/1.0: Encoding and Transport
 
-- [RFC2565] Internet Printing Protocol/1.0: Encoding and Transport
-    https://tools.ietf.org/html/rfc2565
+- [[RFC3380](https://tools.ietf.org/html/rfc3380)]
+    Internet Printing Protocol (IPP): Job and Printer Set Operations
 
-- [RFC3380] Internet Printing Protocol (IPP): Job and Printer Set Operations
-    https://tools.ietf.org/html/rfc3380
+- [[RFC2911](https://tools.ietf.org/html/rfc2911)]
+    Internet Printing Protocol/1.1: Model and Semantics
 
-- [RFC2911] Internet Printing Protocol/1.1: Model and Semantics
-    https://tools.ietf.org/html/rfc2911
+- [[RFC2568](https://tools.ietf.org/html/rfc2568)]
+    Rationale for the Structure of the Model and Protocol for the Internet
+    Printing Protocol
 
-- [RFC2568] Rationale for the Structure of the Model and Protocol for the
-    Internet Printing Protocol
-    https://tools.ietf.org/html/rfc2568
+- [[RFC2566](https://tools.ietf.org/html/rfc2566)]
+    Internet Printing Protocol/1.0: Model and Semantics
 
-- [RFC2566] Internet Printing Protocol/1.0: Model and Semantics
-    https://tools.ietf.org/html/rfc2566
-
-- [RFC1179] Line Printer Daemon Protocol
-    https://tools.ietf.org/html/rfc1179
+- [[RFC1179](https://tools.ietf.org/html/rfc1179)]
+    Line Printer Daemon Protocol
