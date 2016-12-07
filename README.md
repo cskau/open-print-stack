@@ -14,6 +14,22 @@ This project implements IPP and PWG, among other standards allowing you to have
 near complete control over what you're asking your printer to print.
 
 
+## How To Use
+
+Note: the current iteration still relies on PkIPPLib, so step 0 is to get that.
+And while you're at it, you'll also need PIL/PILLOW for anything to do with
+raster.
+
+Also note: lots of things are hard-coded at the moments, so you will have to
+update those values appropriately, like setting the device IP in `print.py`.
+
+Raster an image or document page to a format your printer understands, like PWD:
+    ./raster.py encode ./test.png ./test.pwg
+
+Send the raw raster file to your printer:
+    ./print.py ./test.pwg
+
+
 ## Standards References
 
 - [[PWG5102.4](https://ftp.pwg.org/pub/pwg/candidates/cs-ippraster10-20120420-5102.4.pdf)]
