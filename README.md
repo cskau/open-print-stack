@@ -49,3 +49,26 @@ near complete control over what you're asking your printer to print.
 
 - [[RFC1179](https://tools.ietf.org/html/rfc1179)]
     Line Printer Daemon Protocol
+
+
+## Useful Commands
+
+`ipptool` is a handy tool for talking IPP to known hosts, including probing the
+capabilities of said host:
+
+    ipptool -vt ipp://192.168.2.165/ get-printer-attributes.test
+
+It's also possible to test for standard compliance:
+
+    ipptool -t ipp://192.168.2.165/ ipp-2.2.test
+
+
+## Glossary
+
+- IPP : Internet Printing Protocol
+- PWG : Printing Working Group
+- LPD : Line Printer Daemon
+- PPD : PostScript Printer Description
+- PCL : Printer Control Language
+- RIP : Raster Image Processor
+- DNS-SD : DNS-based Service Discovery
