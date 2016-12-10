@@ -44,9 +44,11 @@ PRINT_QUALITY_ENUM = {
 
 
 def to_b(byte_str):
+  """Convert byte str to signed char."""
   return struct.unpack('b', byte_str)[0]
 
 def to_B(byte_str):
+  """Convert byte str to unsigned char."""
   return struct.unpack('B', byte_str)[0]
 
 
@@ -54,6 +56,7 @@ class Raster:
 
   @staticmethod
   def guess_format(file_path):
+    """Guess the format from the file path and potentially contents."""
     if os.path.exists(file_path):
       header = open(file_path).read(4)[:4]
       if len(header) >= 4 and struct.unpack('4s', header)[0] == 'RaS2':
@@ -90,6 +93,7 @@ class Raster:
       width=None,
       height=None,
       ):
+    """Decode PackBits-like data. Returns PIL Image."""
     if len(data) <= 0:
       return
     
@@ -210,6 +214,7 @@ class Raster:
 
 
 class URF(Raster):
+  """Apple URF UNIRAST raster format."""
 
   colorspace_str = 'RGB'
 
@@ -406,10 +411,9 @@ class URF(Raster):
 
 
 class PWG(Raster):
-  ''' PWG Raster format
-  [PWG5102.4]
+  """PWG Raster format, defined by [PWG5102.4]."""
+  '''
   ftp://ftp.pwg.org/pub/pwg/candidates/cs-ippraster10-20120420-5102.4.pdf
-
 
   A4 according to the internet
   4960 x 7016
@@ -706,7 +710,8 @@ class PWG(Raster):
     self.bits_per_pixel = self.bits_per_color * n_channels
     self.bytes_per_line = (self.bits_per_pixel / 8) * self.width
 
-    self.color_space = 19 # 1 RGB, 6 CMYK, 19 sRGB
+    # CHECK!!!
+    self.color_space = 1 # 1 RGB, 6 CMYK, 19 sRGB
 
     self.num_colors = 3
     self.total_page_count = 1 # CHECK!!!
